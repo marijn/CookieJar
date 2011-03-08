@@ -63,7 +63,7 @@ var Cookie = function (arg_name, arg_value, arg_expires, arg_path)
 
   function _toString ()
   {
-    return _name + "=" + _value + "; expires=" + _expires.toGMTString() + "; path=" + _path
+    return _name + "=" + _value + "; expires=" + _expires.toUTCString() + "; path=" + _path
   };
 
   _assertValidStringValue(arg_name, 'name');
