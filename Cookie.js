@@ -26,6 +26,11 @@ var Cookie = function (arg_name, arg_value, arg_expires, arg_path)
     return this;
   };
 
+  function _getValue ()
+  {
+    return _value;
+  };
+
   function _setExpires (arg_expires)
   {
     var expires = arg_expires || new Date;
@@ -70,6 +75,7 @@ var Cookie = function (arg_name, arg_value, arg_expires, arg_path)
   _setPath(arg_path);
 
   return { setValue:   _setValue
+         , getValue:   _getValue
          , setExpires: _setExpires
          , setPath:    _setPath
          , toString:   _toString
