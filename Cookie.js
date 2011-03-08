@@ -77,6 +77,7 @@ var Cookie = function (arg_name, arg_value, arg_expires, arg_path)
   return { setValue:   _setValue
          , getValue:   _getValue
          , setExpires: _setExpires
+         , getExpires: _getExpires
          , setPath:    _setPath
          , toString:   _toString
          };
