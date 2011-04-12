@@ -127,4 +127,4 @@ var CookieJar = (function (arg_document)
          , write: _write
          , erase: _erase
          };
-})(document);
+})(window.document);
