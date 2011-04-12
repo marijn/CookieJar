@@ -10,6 +10,13 @@ function _assertValidStringValue (arg_value, arg_name)
   }
 };
 
+function _makeDefaultDate (arg_date)
+{
+  arg_date.setTime(arg_date.getTime() + 86400000);
+
+  return arg_date;
+};
+
 var Cookie = function (arg_name, arg_value, arg_expires, arg_path)
 {
   var _name
@@ -33,7 +40,7 @@ var Cookie = function (arg_name, arg_value, arg_expires, arg_path)
 
   function _setExpires (arg_expires)
   {
-    var expires = arg_expires || new Date; // TODO: the default expiry value is unsensible
+    var expires = arg_expires || _makeDefaultDate(new Date);
 
     if ('object' === typeof expires && Date === expires.constructor)
     {
