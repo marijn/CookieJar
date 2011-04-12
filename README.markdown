@@ -8,4 +8,4 @@ not get lost.
 
 The code is released under the [MIT License][1]
 
-[1]: /meta/LICENSE
+[1]: ./meta/LICENSE
