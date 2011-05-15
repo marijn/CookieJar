@@ -5,6 +5,11 @@ function Cookie (arg_name, arg_value, arg_expires, arg_path)
     , _expires
     , _path;
 
+  function _getName ()
+  {
+    return _name;
+  }
+
   function _setValue (arg_value)
   {
     _assertValidStringValue(arg_value, 'value');
@@ -67,7 +72,8 @@ function Cookie (arg_name, arg_value, arg_expires, arg_path)
   _setExpires(arg_expires);
   _setPath(arg_path);
 
-  return { setValue:   _setValue
+  return { getName:    _getName
+         , setValue:   _setValue
          , getValue:   _getValue
          , setExpires: _setExpires
          , getExpires: _getExpires
