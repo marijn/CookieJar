@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>CookieJar test suite</title>
+    <link type="text/css" rel="stylesheet" href="../vendor/jasmine/lib/jasmine.css" />
+    <script type="text/javascript" src="../vendor/jasmine/lib/jasmine.js"></script>
+    <script type="text/javascript" src="../vendor/jasmine/lib/jasmine-html.js"></script>
+    <script type="text/javascript" src="../build/CookieJar.js"></script>
+    <script type="text/javascript" src="spec/CookieJarSpec.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+      jasmine.getEnv().execute();
+    </script>
+  </body>
+</html>
