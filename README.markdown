@@ -1,11 +1,20 @@
-# Managing cookies in JavaScript
+Managing cookies in JavaScript
+==============================
+This is a simple toolkit for managing cookies on the client side. It is by no
+means finished and warn you that I mostly pushed the code to github to ensure
+that it would not get lost on my hard drive.
 
-This is a small utility script for managing cookies on the client side. It is by
-no means finished and I mostly pushed the code to github to make sure it would
-not get lost.
+Building from source
+====================
+`CookieJar` utilizes [Sprockets][1] as a dependency manager. You can build the
+tookit by running the following command:
 
-# License
+```sh
+$ sprocketize -I src src/*.js > build/CookieJar.js
+```
 
-The code is released under the [MIT License][1]
+License
+=======
+The code is released under the [MIT License][2]
 
-[1]: ./meta/LICENSE
+[2]: ./meta/LICENSE
