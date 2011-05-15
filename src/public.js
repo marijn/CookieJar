@@ -1,8 +1,13 @@
-function _read (arg_name)
+function _add (arg_cookie)
+{
+  arg_window.document.cookie = arg_cookie.toString();
+}
+
+function _get (arg_name)
 {
   _assertValidStringValue(arg_name, 'name');
 
-  var _cookies = arg_document.cookie.split(';')
+  var _cookies = arg_window.document.cookie.split(';')
     , _cache   = []
     , _index   = 0
     , _count   = _cookies.length;
@@ -20,12 +25,32 @@ function _read (arg_name)
   throw new Error("no cookie named " + arg_name);
 }
 
-function _write (arg_cookie)
+function _has (arg_name)
 {
-  arg_document.cookie = arg_cookie.toString();
+  throw new Error("not yet implemented");
 }
 
-function _erase (arg_name)
+function _remove (arg_name)
 {
-  arg_document.cookie = new Cookie(arg_name, '_', new Date(1)).toString();
+  arg_window.document.cookie = new Cookie(arg_name, '_', new Date(1)).toUTCString()();
+}
+
+function _accepts ()
+{
+  var _name    = "<%= COOKIE_JAR_VERSION %>"
+    , _accepts = true;
+
+  _add(new Cookie(_name, "_"));
+
+  try
+  {
+    _get(_name);
+    _remove(_name);
+  }
+  catch (exception)
+  {
+    _accepts = false;
+  }
+
+  return _accepts;
 }

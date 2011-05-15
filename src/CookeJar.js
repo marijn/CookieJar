@@ -17,9 +17,11 @@ var CookieJar = CookieJar || (function (arg_window, arg_undefined)
   //= require "./public"
 
   return { Cookie:  Cookie
-         , read:    _read
-         , write:   _write
-         , erase:   _erase
+         , add:     _add
+         , get:     _get
+         , has:     _has
+         , remove:  _remove
+         , accepts: _accepts
          , VERSION: "<%= COOKIE_JAR_VERSION %>"
          };
 }(this.window));
