@@ -21,7 +21,7 @@
     return arg_date;
   }
   
-  var Cookie = function (arg_name, arg_value, arg_expires, arg_path)
+  function Cookie (arg_name, arg_value, arg_expires, arg_path)
   {
     var _name
       , _value
@@ -98,7 +98,7 @@
            , toString:   _toString
            };
   };
-  
+
   var CookieJar = (function (arg_document)
   {
   
