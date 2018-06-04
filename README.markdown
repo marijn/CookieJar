@@ -30,5 +30,5 @@ License
 The code is released under the [MIT License][3]
 
 [1]: http://getsprockets.org
-[2]: http://pivotal.github.com/jasmine
+[2]: https://jasmine.github.io/
 [3]: https://github.com/marijn/CookieJar/blob/develop/meta/LICENSE
